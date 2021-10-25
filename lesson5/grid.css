@@ -1,0 +1,67 @@
+.logo,
+.menu,
+.news,
+.list,
+.nav,
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2em;
+    color: #000000;
+}
+
+.logo {
+    background: #48D1CC;
+}
+.menu {
+    background: #FAEBD7;
+}
+.news {
+    background: #5F9EA0;
+}
+.list {
+    background: #6495ED;
+}
+.nav {
+    background: #8FBC8F;
+}
+.footer {
+    background: #87CEFA;
+}
+
+body {
+    display: grid;
+    grid-template-columns: [left] 100px [middle] 65fr [right] 35fr;
+    grid-template-rows: [important] 100px [main] minmax(300px, 1fr) [footer] 150px [bottom];
+    grid-template-areas: 
+        "logo menu menu"
+        "news list nav"
+        "foot foot nav";
+    min-height: 100vh;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.news {
+    grid-area: news;
+}
+
+.list {
+    grid-area: list;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.footer {
+    grid-area: foot;
+}
